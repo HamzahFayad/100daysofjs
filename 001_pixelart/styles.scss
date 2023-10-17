@@ -3,6 +3,19 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  margin: 0 1.5rem;
+  @media screen and (min-width: 900px) {
+    margin: 0 4rem;
+  }
+}
+
+h1 {
+  text-align: center;
+}
+
+input {
+  display: block;
+  margin: 0 auto;
 }
 
 .pixelart {
@@ -13,14 +26,16 @@ body {
   }
 }
 .pixels {
+  width: 100%;
   display: flex;
   flex-flow: row wrap;
   display: grid;
-  grid-template-columns: repeat(15, 20px);
-  grid-template-rows: repeat(5, 20px);
+  grid-template-columns: repeat(auto-fit, minmax(24px, 1fr));
+  // grid-template-columns: repeat(30, 20px);
+  // grid-template-rows: repeat(15, 20px);
   .pixel {
-    width: 20px;
-    height: 20px;
+    width: 24px;
+    height: 24px;
     border: 1px solid #343434;
   }
 }

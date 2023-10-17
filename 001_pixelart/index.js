@@ -1,14 +1,23 @@
+//variables
+let cols = document.getElementById("cols");
+let rows = document.getElementById("rows");
+
+// let count = 1;
+
+let currentCol = document.getElementById("colorpicker").value;
+
 window.addEventListener("load", () => {
   // add pixels
   let pixels = document.querySelector(".pixels");
-  for (let i = 0; i < 75; i++) {
+  //console.log(cols.value, rows.value);
+  for (let i = 0; i < 360; i++) {
     let pixel = document.createElement("div");
     pixel.classList.add("pixel");
     pixels.appendChild(pixel);
-  }
 
-  //variables
-  let currentCol = document.getElementById("colorpicker").value;
+    // pixel.innerHTML = count;
+    // count++;
+  }
 
   //helper function: color pixel
   const changeColor = (el, col) => {
